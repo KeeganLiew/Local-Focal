@@ -1,0 +1,87 @@
+﻿<Page
+    x:Class="HubApp1.ItemPage"
+    DataContext="{Binding DefaultViewModel.Item, RelativeSource={RelativeSource Self}}"
+    d:DataContext="{Binding Groups[0].Items[0], Source={d:DesignData Source=../HubApp1.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HubApp1"
+    xmlns:data="using:HubApp1.Data"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <ContinuumNavigationTransitionInfo></ContinuumNavigationTransitionInfo>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/bg2.jpg" Opacity="1" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock x:Uid="Header" Text="application name" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0" />
+            <TextBlock Text="{Binding Title}" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,-6.5,0,26.5" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid 
+                  to show details for the current item -->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <Grid x:Name="Coming_soon" Margin="0,0,0,329" PointerPressed="Coming_soon_PointerPressed" >
+
+                <Grid.Background>
+                    <ImageBrush x:Name="EpThumb" Stretch="Uniform" ImageSource="{Binding ImagePath}" Opacity="1" AlignmentY="Top" AlignmentX="Center"/>
+                </Grid.Background>
+
+                <TextBlock x:Name="Coming_soonText" Text="I like tapping on images" FontSize="30" 
+                           TextWrapping="Wrap"
+                           Visibility="Collapsed" Margin="29.901,61.823,-34.567,48.056" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-24.847"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+            </Grid>
+
+            <Grid x:Name="Comm" Margin="-1,194,1,2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="EpCommTitle" Text="Store Details/Offers" Grid.Row="0" Margin="0,5,0,0" 
+                           TextWrapping="Wrap"  FontSize="18"
+                               Style="{StaticResource SubheaderTextBlockStyle}"/>
+                <TextBlock x:Name="AirDate" Text="{Binding AirDate}" Grid.Row="1" Margin="0,0,0,0" 
+                          TextWrapping="Wrap" />
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" Width="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,0">
+
+                    <TextBlock x:Name="EpComm" Text="{Binding Content}" Margin="5,5,5,0" TextWrapping="Wrap"  
+                               FontSize="13" Style="{StaticResource BaseTextBlockStyle}"/>
+                </ScrollViewer>
+
+                <TextBlock x:Name="Author" Text="Closed by 9pm!" Grid.Row="5" Margin="0,3,0,0" TextWrapping="Wrap"/>
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</Page>

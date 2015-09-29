@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ccfebb94-b768-4885-a887-4fb5e09e7edd</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HubApp1</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\AssetsSquare71x71Logo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\bg.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\bg2.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\Jeanswest-640x350 - Copy.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\Jeanswest-640x350.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\logo_Amazon - Copy.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\logo_Amazon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\Logo_Barkers - Copy.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\Logo_Barkers.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\logo_Cotton_On - Copy.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\logo_Cotton_On.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\logo_General_Issue - Copy.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\logo_General_Issue.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\logo_Jay_Jays - Copy.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\cloth\logo_Jay_Jays.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\electric\logo_2_Degrees.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\electric\logo_2_Degrees.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\electric\logo_Dick_Smith_Electronics.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\electric\logo_Dick_Smith_Electronics.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\electric\logo_EB_Games.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\electric\logo_EB_Games.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\electric\logo_JB_HiFi.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\electric\logo_JB_HiFi.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\Churro-Tastic-640x350.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\Logo_Daikoku.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\logo_McDonalds.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\logo_Nandos.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\logo_Oporto.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\logo_Subway.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\s_Churro-Tastic-640x350.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\s_Logo_Daikoku.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\s_logo_McDonalds.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\s_logo_Nandos.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\s_logo_Oporto.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\s_logo_Subway.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\s_The-Coffee-Club-640x350.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\food\The-Coffee-Club-640x350.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img_57221.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\logo-print.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\logo_ANZ_Bank.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\logo_ASB_Bank_Ltd.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\refresh.png" />
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\MediumGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DarkGray.png" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
+  </ItemGroup>
+</Project>
